@@ -8,7 +8,7 @@
     "build": "pnpm -r --if-present run build",
     "lint": "pnpm -r --if-present run lint",
     "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json && pnpm -r --if-present run typecheck",
-    "test": "pnpm -r --if-present run test",
+    "test": "pnpm --filter @dev-knowledge-hub/shared test && pnpm --filter @dev-knowledge-hub/api test && pnpm --filter @dev-knowledge-hub/web test",
     "format": "prettier --cache --write .",
     "format:check": "prettier --check .",
     "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"

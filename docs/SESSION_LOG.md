@@ -18,3 +18,8 @@
 - Reproduced a targeted Turbo failure with exit code `-1073741515` on `pnpm exec turbo run lint --filter @dev-knowledge-hub/web`.
 - Scaffolded `apps/api` with NestJS, a root health-style endpoint, and a minimal HTTP integration test.
 - Confirmed the API starts on port `3001` and returns the expected JSON payload.
+- Created shared packages for `ui`, `api-client`, `database`, `markdown`, and `shared` with strict TypeScript scaffolds.
+- Added a minimal unit test for `packages/shared` helpers.
+- Stabilized root test orchestration by switching workspace test execution to sequential mode on Windows.
+- Replaced the root test command with explicit sequential package invocations for `shared`, `api`, and `web`.
+- Verified the combined root gate with `pnpm check` after adding the shared packages.

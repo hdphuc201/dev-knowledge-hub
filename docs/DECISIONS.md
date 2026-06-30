@@ -47,3 +47,15 @@
 - Date: `2026-06-30`
 - Decision: scaffold `apps/api` with `@nestjs/core@11.1.27`, `@nestjs/common@11.1.27`, `@nestjs/platform-express@11.1.27`, `@nestjs/testing@11.1.27`, `typescript-eslint@8.62.1`, `tsx@4.22.4`, and `vitest@4.1.9`.
 - Rationale: NestJS docs require Node.js `>=20`, the Node.js releases page lists `v24.18.0` as the latest LTS line, and the selected NestJS packages are the current stable compatible set from the registry.
+
+## D-0009 Shared package scaffold pattern
+
+- Date: `2026-06-30`
+- Decision: scaffold `packages/*` as strict TypeScript packages with `tsc`-based build and typecheck scripts, and keep the first runtime test focused in `packages/shared`.
+- Rationale: this creates usable workspace foundations without introducing premature feature dependencies or unnecessary toolchains before Phase 01.
+
+## D-0010 Sequential workspace test orchestration
+
+- Date: `2026-06-30`
+- Decision: run root tests through explicit sequential package invocations for `@dev-knowledge-hub/shared`, `@dev-knowledge-hub/api`, and `@dev-knowledge-hub/web`.
+- Rationale: recursive pnpm orchestration was unreliable for the combined test gate on Windows, while explicit sequential package execution keeps the root test gate deterministic without changing package-level test contracts.

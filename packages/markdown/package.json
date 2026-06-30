@@ -1,0 +1,14 @@
+{
+  "name": "@dev-knowledge-hub/markdown",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm exec tsc -p tsconfig.build.json",
+    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "26.0.1",
+    "typescript": "5.9.3"
+  }
+}
