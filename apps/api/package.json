@@ -1,0 +1,30 @@
+{
+  "name": "@dev-knowledge-hub/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "pnpm exec tsc -p tsconfig.build.json",
+    "lint": "pnpm exec eslint src test --max-warnings=0",
+    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json",
+    "test": "pnpm exec vitest run --pool threads --maxWorkers 1",
+    "test:watch": "pnpm exec vitest"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.27",
+    "@nestjs/core": "11.1.27",
+    "@nestjs/platform-express": "11.1.27",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "11.1.27",
+    "@types/node": "26.0.1",
+    "eslint": "9.39.4",
+    "tsx": "4.22.4",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.62.1",
+    "vitest": "4.1.9"
+  }
+}

@@ -16,3 +16,5 @@
 - Kept `turbo.json` and Turbo-compatible package scripts in place, but switched root orchestration to recursive `pnpm` workspace scripts because Turbo execution was unstable in this Windows environment.
 - Corrected `.gitignore` so the repository-memory Markdown files under `docs/` are trackable.
 - Reproduced a targeted Turbo failure with exit code `-1073741515` on `pnpm exec turbo run lint --filter @dev-knowledge-hub/web`.
+- Scaffolded `apps/api` with NestJS, a root health-style endpoint, and a minimal HTTP integration test.
+- Confirmed the API starts on port `3001` and returns the expected JSON payload.

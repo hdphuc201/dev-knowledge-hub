@@ -41,3 +41,9 @@
 - Date: `2026-06-30`
 - Decision: update `.gitignore` so `docs/*.md` files are tracked while non-markdown or generated outputs under `docs/` remain ignored.
 - Rationale: the repository memory files are required for Phase 00 handoff and must be versioned so future Codex sessions can recover the exact next task.
+
+## D-0008 API bootstrap stack
+
+- Date: `2026-06-30`
+- Decision: scaffold `apps/api` with `@nestjs/core@11.1.27`, `@nestjs/common@11.1.27`, `@nestjs/platform-express@11.1.27`, `@nestjs/testing@11.1.27`, `typescript-eslint@8.62.1`, `tsx@4.22.4`, and `vitest@4.1.9`.
+- Rationale: NestJS docs require Node.js `>=20`, the Node.js releases page lists `v24.18.0` as the latest LTS line, and the selected NestJS packages are the current stable compatible set from the registry.

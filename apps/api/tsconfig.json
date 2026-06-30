@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "types": ["node", "vitest/globals"]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "vitest.config.mts"],
+  "exclude": ["dist", "node_modules"]
+}
