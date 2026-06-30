@@ -1,0 +1,21 @@
+{
+  "name": "dev-knowledge-hub",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "dev": "node ./scripts/run-turbo-task.mjs dev --parallel",
+    "build": "node ./scripts/run-turbo-task.mjs build",
+    "lint": "node ./scripts/run-turbo-task.mjs lint",
+    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json && node ./scripts/run-turbo-task.mjs typecheck",
+    "test": "node ./scripts/run-turbo-task.mjs test",
+    "format": "prettier --cache --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+  },
+  "devDependencies": {
+    "prettier": "3.9.4",
+    "turbo": "2.10.1",
+    "typescript": "6.0.3"
+  }
+}
