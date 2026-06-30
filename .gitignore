@@ -36,7 +36,16 @@ out/
 # Claude
 .claude/
 CLAUDE.md
-docs
+# Track repository-memory markdown files, ignore any other generated docs outputs.
+docs/*
+!docs/
+!docs/MASTER_PLAN.md
+!docs/TASKS.md
+!docs/EXECUTION_STATE.md
+!docs/DECISIONS.md
+!docs/SESSION_LOG.md
+!docs/RISKS.md
+!docs/TEST_MATRIX.md
 prompts
 
 .agent
