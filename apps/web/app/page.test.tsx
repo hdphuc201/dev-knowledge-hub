@@ -6,9 +6,7 @@ describe("HomePage", () => {
   it("renders the repository foundation heading and summary", () => {
     render(<HomePage />);
 
-    expect(
-      screen.getByRole("heading", { name: "Phuc Dev Notes" }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Phuc Dev Notes" })).toBeInTheDocument();
     expect(screen.getByText("Foundation setup")).toBeInTheDocument();
   });
 });

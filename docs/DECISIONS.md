@@ -59,3 +59,9 @@
 - Date: `2026-06-30`
 - Decision: run root tests through explicit sequential package invocations for `@dev-knowledge-hub/shared`, `@dev-knowledge-hub/api`, and `@dev-knowledge-hub/web`.
 - Rationale: recursive pnpm orchestration was unreliable for the combined test gate on Windows, while explicit sequential package execution keeps the root test gate deterministic without changing package-level test contracts.
+
+## D-0011 Shared lint and format foundation
+
+- Date: `2026-07-01`
+- Decision: keep linting centralized in a shared root `eslint.config.mjs`, let workspace packages opt into it through local config wrappers or direct `eslint` scripts, and keep formatting centralized in root Prettier config and ignore files with `--ignore-unknown` enabled.
+- Rationale: this preserves the package-specific Next.js rules in `apps/web`, keeps the API and shared packages on the same baseline, and avoids relying on the unstable Turbo execution path for quality gates.

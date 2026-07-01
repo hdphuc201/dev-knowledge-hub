@@ -3,13 +3,13 @@
 ## Current status
 
 - Active phase: `Phase 00`
-- Last completed task: `P00-005`
-- Last completed task summary: created strict TypeScript shared packages for `ui`, `api-client`, `database`, `markdown`, and `shared`, including a minimal test in `packages/shared`.
-- Validation status: shared-package build, typecheck, test, root quality commands, and workspace orchestration checks all passed.
+- Last completed task: `P00-006`
+- Last completed task summary: established repository-wide ESLint and Prettier foundations with a shared root ESLint config, a root Prettier config and ignore file, and lint scripts across `apps/*` and `packages/*`.
+- Validation status: shared-package build, typecheck, test, root quality commands, format checks, and workspace orchestration checks all passed.
 
 ## Exact next task
 
-- `P00-006 Configure repository-wide ESLint, Prettier, and formatting scripts.`
+- P00-007 Add Docker Compose PostgreSQL setup, `.env.example`, and Prisma baseline configuration.
 
 ## Notes for next Codex session
 

@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "lint": "pnpm exec eslint . --max-warnings=0",
     "build": "pnpm exec tsc -p tsconfig.build.json",
     "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json"
   },

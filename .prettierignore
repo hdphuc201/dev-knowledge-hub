@@ -1,0 +1,12 @@
+**/node_modules/**
+**/dist/**
+**/coverage/**
+**/.next/**
+**/out/**
+**/build/**
+**/.turbo/**
+**/tmp/**
+**/temp/**
+**/*.tsbuildinfo
+**/*.log
+**/*.seed
