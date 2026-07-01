@@ -83,3 +83,9 @@
 - Date: `2026-07-01`
 - Decision: run `apps/web` Vitest tests with `vmThreads` and disabled file parallelism.
 - Rationale: `threads` and `forks` both produced repeatable worker startup timeouts for the jsdom test on this Windows environment, while `vmThreads` completed reliably without changing the test framework.
+
+## D-0015 GitHub Actions quality workflow
+
+- Date: `2026-07-01`
+- Decision: run the Phase 00 quality workflow on `ubuntu-latest` with `pnpm@10.18.3` and Node.js `24`, and execute the existing root `format:check`, `lint`, `typecheck`, `test`, and `build` scripts directly.
+- Rationale: this keeps CI aligned with the current monorepo contract, avoids duplicating per-package logic in workflow YAML, and uses the same root gates already validated locally.

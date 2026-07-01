@@ -26,3 +26,4 @@
 - Standardized repository-wide ESLint and Prettier with a shared root config, package lint scripts, and a root `.prettierignore` that skips generated output.
 - Added `docker-compose.yml`, root `.env.example`, and a Prisma 7 baseline in `packages/database`, including successful `prisma validate` and `prisma generate` checks.
 - Expanded the Vitest baseline to `ui`, `api-client`, `database`, and `markdown`, and updated root `pnpm test` to run all workspace test suites sequentially.
+- Added `.github/workflows/quality.yml` to execute install, format, lint, typecheck, test, and build through the existing root scripts in GitHub Actions.

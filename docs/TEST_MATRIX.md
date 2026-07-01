@@ -15,4 +15,5 @@
 | Formatting foundation   | Root Prettier checks and workspace lint scripts succeed                                           | PASS    |
 | Database baseline       | Compose config plus Prisma validate/generate succeed                                              | PASS    |
 | Database                | PostgreSQL container healthy                                                                      | PENDING |
+| CI quality workflow     | Workflow syntax is valid and references the existing root quality scripts                         | PASS    |
 | Quality gates           | Root commands execute successfully for the current workspace set                                  | PASS    |

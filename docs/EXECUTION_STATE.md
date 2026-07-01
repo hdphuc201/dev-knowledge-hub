@@ -3,13 +3,13 @@
 ## Current status
 
 - Active phase: `Phase 00`
-- Last completed task: `P00-008`
-- Last completed task summary: established a workspace-wide Vitest baseline across `apps/*` and `packages/*`, added baseline tests for the remaining shared packages, and expanded root `pnpm test` to run all intended package tests in a stable order.
-- Validation status: targeted package tests, root test orchestration, root non-zero failure behavior, and the root quality commands all passed.
+- Last completed task: `P00-009`
+- Last completed task summary: added a GitHub Actions quality workflow that installs dependencies and runs the root format, lint, typecheck, test, and build commands on `push` and `pull_request`.
+- Validation status: workflow YAML formatting and script references passed, and the local root quality commands still passed after workflow creation.
 
 ## Exact next task
 
-- P00-009 Add GitHub Actions quality workflow for install, format, lint, typecheck, test, and build.
+- P00-010 Create `codex-plan/` phase files and record dependency version decisions with rationale.
 
 ## Notes for next Codex session
 
