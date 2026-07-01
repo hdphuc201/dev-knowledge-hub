@@ -6,10 +6,17 @@
   "scripts": {
     "lint": "pnpm exec eslint . --max-warnings=0",
     "build": "pnpm exec tsc -p tsconfig.build.json",
-    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json"
+    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json",
+    "prisma:validate": "pnpm exec prisma validate",
+    "prisma:generate": "pnpm exec prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "7.8.0"
   },
   "devDependencies": {
     "@types/node": "26.0.1",
+    "dotenv": "17.4.2",
+    "prisma": "7.8.0",
     "typescript": "5.9.3"
   }
 }

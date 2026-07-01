@@ -26,11 +26,15 @@ dist-ssr
 
 
 package-lock.json
+.env
+.env.*
+!.env.example
 
 # Next.js
 .next/
 out/
 *.tsbuildinfo
+packages/database/src/generated/
 
 
 # Claude

@@ -65,3 +65,9 @@
 - Date: `2026-07-01`
 - Decision: keep linting centralized in a shared root `eslint.config.mjs`, let workspace packages opt into it through local config wrappers or direct `eslint` scripts, and keep formatting centralized in root Prettier config and ignore files with `--ignore-unknown` enabled.
 - Rationale: this preserves the package-specific Next.js rules in `apps/web`, keeps the API and shared packages on the same baseline, and avoids relying on the unstable Turbo execution path for quality gates.
+
+## D-0012 PostgreSQL and Prisma baseline
+
+- Date: `2026-07-01`
+- Decision: use `postgres:18-alpine` for local Compose and Prisma `7.8.0` in `packages/database`, with Prisma datasource configuration moved to `prisma.config.ts` and a generated client output under `packages/database/src/generated/prisma`.
+- Rationale: PostgreSQL 18 is the current upstream release line, Prisma 7 requires datasource URL configuration outside `schema.prisma`, and an explicit generated-client output keeps the baseline compatible with current Prisma CLI behavior.

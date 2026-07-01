@@ -5,6 +5,7 @@
 **/out/**
 **/build/**
 **/.turbo/**
+**/src/generated/**
 **/tmp/**
 **/temp/**
 **/*.tsbuildinfo

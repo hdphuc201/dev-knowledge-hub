@@ -24,3 +24,4 @@
 - Replaced the root test command with explicit sequential package invocations for `shared`, `api`, and `web`.
 - Verified the combined root gate with `pnpm check` after adding the shared packages.
 - Standardized repository-wide ESLint and Prettier with a shared root config, package lint scripts, and a root `.prettierignore` that skips generated output.
+- Added `docker-compose.yml`, root `.env.example`, and a Prisma 7 baseline in `packages/database`, including successful `prisma validate` and `prisma generate` checks.

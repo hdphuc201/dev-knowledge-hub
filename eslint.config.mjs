@@ -12,6 +12,7 @@ export default defineConfig([
     "**/build/**",
     "**/.turbo/**",
     "**/*.tsbuildinfo",
+    "**/src/generated/**",
     "**/tmp/**",
     "**/temp/**",
     "**/next-env.d.ts",
