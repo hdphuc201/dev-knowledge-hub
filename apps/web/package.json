@@ -8,7 +8,7 @@
     "build": "next build",
     "lint": "pnpm exec eslint . --max-warnings=0",
     "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json",
-    "test": "pnpm exec vitest run --pool threads --maxWorkers 1"
+    "test": "pnpm exec vitest run"
   },
   "dependencies": {
     "next": "16.2.9",

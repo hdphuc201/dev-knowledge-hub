@@ -8,6 +8,8 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    fileParallelism: false,
+    pool: "vmThreads",
     setupFiles: "./vitest.setup.ts",
   },
 });

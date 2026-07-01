@@ -6,10 +6,12 @@
   "scripts": {
     "lint": "pnpm exec eslint . --max-warnings=0",
     "build": "pnpm exec tsc -p tsconfig.build.json",
-    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json"
+    "typecheck": "pnpm exec tsc --noEmit -p tsconfig.json",
+    "test": "pnpm exec vitest run --pool threads --maxWorkers 1"
   },
   "devDependencies": {
     "@types/node": "26.0.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "4.1.9"
   }
 }

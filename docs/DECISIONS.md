@@ -71,3 +71,15 @@
 - Date: `2026-07-01`
 - Decision: use `postgres:18-alpine` for local Compose and Prisma `7.8.0` in `packages/database`, with Prisma datasource configuration moved to `prisma.config.ts` and a generated client output under `packages/database/src/generated/prisma`.
 - Rationale: PostgreSQL 18 is the current upstream release line, Prisma 7 requires datasource URL configuration outside `schema.prisma`, and an explicit generated-client output keeps the baseline compatible with current Prisma CLI behavior.
+
+## D-0013 Workspace test baseline
+
+- Date: `2026-07-01`
+- Decision: use Vitest as the single test runner across all current workspace packages, add one baseline test for each package with executable behavior, and run root `pnpm test` as an explicit sequential `pnpm --filter` chain covering `shared`, `ui`, `api-client`, `database`, `markdown`, `api`, and `web`.
+- Rationale: this keeps test execution deterministic on Windows, avoids introducing a second framework, and makes the root test gate explicitly reflect the current workspace surface.
+
+## D-0014 Web test pool mode
+
+- Date: `2026-07-01`
+- Decision: run `apps/web` Vitest tests with `vmThreads` and disabled file parallelism.
+- Rationale: `threads` and `forks` both produced repeatable worker startup timeouts for the jsdom test on this Windows environment, while `vmThreads` completed reliably without changing the test framework.
